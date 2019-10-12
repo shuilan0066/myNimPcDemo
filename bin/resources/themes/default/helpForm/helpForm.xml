@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,40" mininfo="450,450" size="450,450" sizebox="4,4,6,6" shadowattached="false" >
+    <VBox bkcolor="xnw_client" bordercolor="green" bordersize="1,1,1,1" padding="1,1,1,1">
+        <!-- 客户端名称设置 -->
+        <HBox height="40" bkcolor="white">
+            <Control />
+            <Label text="帮助" valign="center" font="2" normaltextcolor="black" />
+            <Control />
+            <Button class="btn_wnd_close_black" name="myClosebtn" margin="0,0,10,0" valign="center" />
+        </HBox>
+        <CefControl name="cef_control"/>
+    </VBox>
+</Window>

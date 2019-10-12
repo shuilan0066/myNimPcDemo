@@ -1,0 +1,69 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cef Tests</title>
+    <script language="JavaScript">
+        // JS中调用C++函数
+        function sendMessage() {
+          var message = document.getElementById("message").value;
+          NimCefWebInstance.call('showCppMessage',{message},(error, result) => {
+            console.log(result);
+          });
+        }        
+        // 写一个JS函数，让C++可以通过调用这个函数控制网页
+        //    /*
+        //     * 注册一个回调函数，用于在 C++ 应用中调用
+        //     * param[in] showJsMessage 回调函数的名称，C++ 会使用该名称来调用此回调函数
+        //     * param[in] callback 回调函数执行体
+        //     */
+ 
+        // ((obj) => {
+        // obj.register('showJsMessage', (param)=>{
+        //         document.getElementById("result").value = "收到来自C++的消息:" + JSON.stringify(param);
+        //     })
+        // })(NimCefWebInstance)       
+        // 
+        //  
+        //   
+        ((obj) => {
+            /*
+             * 注册一个回调函数，用于在 C++ 应用中调用
+             * param[in] showJsMessage 回调函数的名称，C++ 会使用该名称来调用此回调函数
+             * param[in] callback 回调函数执行体
+             */
+            obj.register('showJsMessage', (arguments) => {
+                document.getElementById("result").value = "收到来自C++的消息:" + JSON.stringify(arguments);
+                return {
+                    message: 'showJs function was executed, this message return by JavaScript.'
+                }
+            })
+        })(NimCefWebInstance) 
+    </script>
+</head>
+
+<body bgcolor="white">
+<h3>Cef3.2623 C++与JS交互功能测试页面</h3>
+
+<fieldset style="margin-top:20px;border-color:#E2DED6;border-width:1px;border-style:Solid;">
+    <legend style="color:#333333;font-size:0.8em;font-weight:bold;">
+        JS调用C++测试
+    </legend>
+
+    <div style="margin-left:10px">
+        发送给C++的文本: <input type="text" id="message" value="你好C++！">
+        <br/><input type="button" onclick="sendMessage();" value="发送给C++">
+    </div>
+</fieldset>
+
+<fieldset style="margin-top:20px;border-color:#E2DED6;border-width:1px;border-style:Solid;">
+    <legend style="color:#333333;font-size:0.8em;font-weight:bold;">
+        C++调用JS测试
+    </legend>
+
+    <div style="margin-left:10px">
+        收到C++发来的的文本：
+        <br/><textarea rows="2" cols="40" id="result"></textarea>
+    </div>
+</fieldset>
+</body>
+</html>

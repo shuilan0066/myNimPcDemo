@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,40" mininfo="450,450" size="450,450" sizebox="4,4,6,6" shadowattached="true" alphafixcorner="10,10,10,10" roundcorner="10,10">
+    <VBox bkcolor="xnw_client">
+        <!-- 客户端名称设置 -->
+        <HBox height="40" bkcolor="white">
+            <Control />
+            <Label text="帮助" valign="center" font="2" normaltextcolor="black" />
+            <Control />
+            <Button class="btn_wnd_close_black" name="myClosebtn" margin="0,0,10,0" valign="center" />
+        </HBox>
+        <VListBox class="xnw_list" bkcolor="xnw_client" name="class_list" vscrollunit="100" childmargin="0" vscrollbar="true" padding="0,0,20,0" margin="0,0,10,0" visible="true">
+            <VBox padding="20,20,20,20" height="auto">
+                <HBox height="30">
+                    <Control bkimage="question.png" width="auto" height="auto" margin="0,0,10,0" />
+                    <Label text="前期准备" font="1" normaltextcolor="black" font="1"/>
+                </HBox>
+                <VBox bkcolor="bk_wnd_lightcolor" padding="20,0,0,0" height="auto" >
+                    <Label text="1) 视频直播要求较高，请选择至少i5以上电脑配置" valign="center" margin="0,10,0,0"/>
+                    <Label text="2) 网络确保高速，最好独占" valign="center" margin="0,10,0,0"/>
+                    <Label text="3) 使用前关闭360等软件，防止干扰误删" valign="center" margin="0,10,0,0"/>
+                    <Label text="4) 使用前关闭其它软件和浏览器，以免占用资源，引起卡顿" valign="center" margin="0,10,0,10" />
+                </VBox>
+            </VBox>
+            <VBox padding="20,20,20,20" height="auto">
+                <HBox  height="30">
+                    <Control bkimage="question.png" width="auto" height="auto" margin="0,0,10,0" />
+                    <Label text="没有声音怎么办？" font="1" normaltextcolor="black" font="1" />
+                </HBox>
+
+
+                <VBox bkcolor="bk_wnd_lightcolor" padding="20,10,0,10" height="auto" >
+                    <Label text="检查下麦克风是否开启，检查耳机是不是有问题" valign="center"/>
+                </VBox>
+            </VBox>
+            <VBox padding="20,20,20,20" height="auto">
+                <HBox  height="30">
+                    <Control bkimage="question.png" width="auto" height="auto" margin="0,0,10,0" />
+                    <Label text="摄像头没启动或有问题怎么办？" font="1" normaltextcolor="black" font="1" />
+                </HBox>
+                <VBox bkcolor="bk_wnd_lightcolor" padding="20,10,0,10" height="auto" >
+                    <Label text="1) 检查摄像头是否连接正确" valign="center" margin="0,0,0,0"/>
+                    <Label text="2) 外接式摄像头可重新插拔下试试" valign="center" margin="0,10,0,0"/>
+                    <Label text="3) 重启软件尝试" valign="center" margin="0,10,0,0"/>
+
+                    <Label text="4) 重启电脑尝试" valign="center" margin="0,10,0,0"/>
+                    <Label text="5) 不要点击重启按钮，而是将电脑关闭一会，再重新打开尝试" valign="center" margin="0,10,0,0"/>
+                </VBox>
+            </VBox>
+
+
+             <VBox padding="20,20,20,20" height="auto">
+                <HBox  height="30">
+                    <Control bkimage="question.png" width="auto" height="auto" margin="0,0,10,0" />
+                    <Label text="意外崩溃怎么办？" font="1" normaltextcolor="black" />
+                </HBox>
+                 <VBox bkcolor="bk_wnd_lightcolor" padding="20,0,0,0" height="auto" >
+                    <Label text="只要没点击过下课，此课暂停中，可进行如下尝试" valign="center" margin="0,10,0,0"/>
+                    <Label text="1) 若能关闭软件，则关闭软件；若不能关闭，则重启软件" valign="center" margin="0,10,0,0"/>
+                    <Label text="2) 重新启动软件，查看是否正常" valign="center" margin="0,10,0,0"/>
+
+                    <Label text="3) 重启电脑，查看是否正常" valign="center" margin="0,10,0,10"/>
+                </VBox>
+            </VBox>
+
+             <VBox padding="20,20,20,20" height="auto">
+                <HBox  height="30">
+                    <Control bkimage="question.png" width="auto" height="auto" margin="0,0,10,0" />
+                    <Label text="直播出错怎么办？" font="1" normaltextcolor="black" />
+                </HBox>
+                 <VBox bkcolor="bk_wnd_lightcolor" padding="20,0,0,0" height="auto" >
+                    <Label text="1) 查看网络是否正常" valign="center" margin="0,10,0,0"/>
+                    <Label text="2) 暂停直播，然后点击 继续直播 看是否正常" valign="center" margin="0,10,0,0"/>
+                    <Label text="3) 重启软件，查看是否正常" valign="center" margin="0,10,0,10"/>
+                </VBox>
+            </VBox>
+
+             <VBox padding="20,20,20,20" height="auto">
+                <HBox  height="30">
+                    <Control bkimage="question.png" width="auto" height="auto" margin="0,0,10,0" />
+                    <Label text="连麦注意事项" font="1" normaltextcolor="black" />
+                </HBox>
+                 <VBox bkcolor="bk_wnd_lightcolor" padding="20,10,0,10" height="auto" >
+                    <Label text="1) 连麦者最好不要在一个屋子，避免声音重采样，造成回声" valign="center" margin="0,00,0,0"/>
+                    <Label text="2) 连麦时，声音源建议选择 麦克风，因 系统声音源 会有回声" valign="center" margin="0,10,0,0"/>
+                   
+                </VBox>
+            </VBox>
+
+        </VListBox>
+    </VBox>
+</Window>

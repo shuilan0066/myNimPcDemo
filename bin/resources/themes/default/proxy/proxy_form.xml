@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="280,0" caption="0,0,0,34" textid="STRID_PROXY_SETTING_TITLE">    
+    <VBox bkcolor="bk_wnd_lightcolor" width="auto" minwidth="280" height="auto">
+        <HBox class="caption">
+            <Label class="font_title" width="stretch" name="title" valign="center" normaltextcolor="darkcolor" textid="STRID_PROXY_SETTING_TITLE"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>	
+		<Box name="global_proxy" height="auto" />
+        <TileListBox name="proxys" vscrollbar="false" columns="2" itemsize="220,300" height="470" width="630" />
+		<HBox margin="0,15,10,10" halign="right" height="auto" width="auto">
+			<Button class="btn_global_white_80x30" name="close" textid="STRING_NO_"/>
+			<Button class="btn_global_green_80x30" name="confirm" textid="STRING_OK_" margin="10,0,0,0" />
+		</HBox>		
+    </VBox>
+</Window>

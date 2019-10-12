@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <HBox width="auto" height="auto">
+        <HBox width="150" height="auto" childmargin="4">
+            <Control />
+            <Label name="room_name" width="auto" textid="STRID_CHATROOM_LOL_GAME_LIVE"/>
+            <Label name="anchor" width="auto" textid="STRID_CHATROOM_HOST"/>
+            <Label name="manager" width="auto" textid="STRID_CHATROOM_ROOM_ADMIN" visible="false"/>
+            <Control />
+        </HBox>
+        <HBox width="150" height="auto" childmargin="4">
+            <Control />
+            <Button name="mute_list" width="auto" textid="STRID_CHATROOM_MUTE_LIST"/>
+            <Button name="black_list" width="auto" textid="STRID_CHATROOM_BLACK_LIST"/>
+            <Button name="manager_list" width="auto" textid="STRID_CHATROOM_ADMIN"/>
+            <Control />
+        </HBox>
+        <HBox width="100" height="auto" childmargin="4">
+            <Control />
+            <Button name="chatroom_setting" width="auto" textid="STRID_CHATROOM_ROOM_SETTING"/>
+            <Button name="dismiss" width="auto" textid="STRID_CHATROOM_DISSOLVE"/>
+            <Button name="resign" width="auto" textid="STRID_CHATROOM_RESIGN" visible="false"/>
+            <Control />
+        </HBox>
+    </HBox>
+</Window>
